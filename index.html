@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Img/Tiside-code.webp" type="image/x-icon">
+    <link rel="stylesheet" href="Style/style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Dashboard</title>
+</head>
+<body>
+
+    <div class="main">
+        <div class="nav">
+            <div class="logo">
+                <img src="Img/Tiside-code-noBack.png" alt="">
+                <h4>Tiside<span>Code</span></h4>
+            </div>
+            <div class="user">
+                <div class="toggle-container">
+                    <input type="checkbox" id="toggle-switch" class="toggle-switch">
+                    <label for="toggle-switch" class="toggle-label">
+                        <div class="sun-icon"><i class='bx bxs-sun'></i></div>
+                        <div class="moon-icon"><i class='bx bxs-moon'></i></div>
+                    </label>
+                </div>
+                <div class="user-info">
+                    <p class="username">Hey,<span>Tiside</span> <br>
+                        Admin</p>        
+                </div>
+                <div class="user-pfp"></div>
+            </div>
+        </div>
+            <div class="main-container">
+            <div class="side">
+                <ul>
+                    <li><i class='bx bxs-dashboard'></i> Dashboard</li>
+                    <li><i class='bx bx-user'></i>Users</li>
+                    <li><i class='bx bx-history'></i>History</li>
+                    <li><i class='bx bxs-analyse'></i>Analytics</li>
+                    <li><i class='bx bx-envelope'></i>Tickets</li>
+                    <li><i class='bx bx-list-ul'></i>Sale List</li>
+                    <li><i class='bx bxs-report'></i>Reports</li>
+                    <li><i class='bx bxs-cog'></i>Settings</li>
+                    <li><i class='bx bx-plus'></i>New Login</li>
+                </ul>
+                <button><i class='bx bx-log-in'></i><span>Logout</span></button>
+            </div>
+            <div class="content">
+                <div class="main-content">
+                    <div class="container">
+                        <h2>Analytics</h2>
+                        <div class="row">
+                            <div class="col">
+                                <div class="stats-text">
+                                 <p>Total sales</p>
+                                    <h4 class="sales">$65,024</h4>
+                                </div>
+                                <div class="stats-perc">
+                                  +81%
+                             </div>
+                            </div>
+                            <div class="col">
+                                <div class="stats-text">
+                                 <p>Total Visit</p>
+                                 <h4 class="sales">31,403</h4>
+                             </div>
+                             <div class="stats-perc">
+                                   +48%
+                                </div>
+                            </div>
+                            <div class="col">
+                             <div class="stats-text">
+                                    <p>Searches</p>
+                                    <h4 class="sales">15,552</h4>
+                                </div>
+                                <div class="stats-perc">
+                                    +34%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <h4>New Users</h4>
+                        <div class="row">
+                            <div class="col">
+                                <div class="users">
+                                    <div class="new-user-profile"></div>
+                                    <h6>Stanislav</h6>
+                                    <p>45 min Ago</p>
+                                </div>
+                                <div class="users">
+                                    <div class="new-user-profile"></div>
+                                    <h6>Stanislav</h6>
+                                    <p>45 min Ago</p>
+                                </div>
+                                <div class="users">
+                                    <div class="new-user-profile"></div>
+                                    <h6>Stanislav</h6>
+                                    <p>45 min Ago</p>
+                                </div>
+                                <div class="users">
+                                    <i class='bx bx-plus'></i>
+                                    <h6>More</h6>
+                                    <p>New User</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <h4>Recent Orders</h4>
+                        <div class="row">
+                            <div class="col">
+                                <div class="your-notes">
+                                    <h4>Notes1</h4>
+                                    <h4><div class="note-status"></div>Created</h4>
+                                    <div class="notes-panel">
+                                        <button>Open</button>
+                                        <div class="notes-manipulate">
+                                        <i class='bx bx-dots-horizontal-rounded'></i>
+                                        <ul id="edit-panel1">
+                                            <li><a href="">Edit</a></li>
+                                            <li><a href="">Learn more</a></li>
+                                            <li><a href="">Delete</a></li>
+                                        </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="your-notes">
+                                    <h4>Users</h4>
+                                    <h4><div class="note-status"></div>Created</h4>
+                                    <div class="notes-panel">
+                                        <button>Open</button>
+                                        <div class="notes-manipulate">
+                                            <i class='bx bx-dots-horizontal-rounded'></i>
+                                            <ul id="edit-panel2">
+                                                <li><a href="">Edit</a></li>
+                                                <li><a href="">Learn more</a></li>
+                                                <li><a href="">Delete</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="your-notes">
+                                    <h4>Web</h4>
+                                    <h4><div class="note-status"></div>Created</h4>
+                                    <div class="notes-panel">
+                                        <button>Open</button>
+                                        <div class="notes-manipulate">
+                                            <i class='bx bx-dots-horizontal-rounded'></i>
+                                            <ul id="edit-panel3">
+                                                <li><a href="">Edit</a></li>
+                                                <li><a href="">Learn more</a></li>
+                                                <li><a href="">Delete</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="main-side">
+                    <div class="about-info">
+                        <img src="Img/Tiside-code-noBack.png" alt="Tiside">
+                        <h5>TisideCode</h5>
+                        <p>Front-End Web Developer</p>
+                    </div>
+                    <div class="reminders">
+                        <h4>Reminders</h4>
+                        <i class='bx bx-bell'></i>
+                    </div>
+                    
+                    <div class="work">
+                        <div class="work-panel">
+                            <div>
+                                <i class='bx bxs-volume-full'></i>
+                                <p>Workshop <br>
+                                <span>some text</span></p>
+                            </div>
+                            
+                            <i class='bx bx-dots-vertical-rounded'></i>
+                        </div>
+                        <div class="work-panel">
+                            <div>
+                                <i class='bx bxs-pencil'></i>
+                                <p>Edit <br>
+                                    <span>some text</span></p>
+                            </div>
+                            
+                            <i class='bx bx-dots-vertical-rounded'></i>
+                        </div>
+                    </div>
+                    <div class="add-reminders">
+                        <i class='bx bx-plus'></i>
+                        <p>Add Reminders</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

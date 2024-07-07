@@ -32,6 +32,7 @@
     --padding-1: 1.2rem;
 
     --box-shadow: 0 2rem 3rem var(--color-light);
+    --box-shadow-black: 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 body {
@@ -260,6 +261,7 @@ body {
     column-gap: 50px;
     text-align: center;
     width: 300px;
+    transition: transform 0.5s ease;
 }
 .content .container .row .col p{
     margin: 0;
@@ -305,6 +307,11 @@ body {
     bottom: -10%;
 }
 
+.content .container:nth-of-type(1) .row .col:hover{
+    cursor: pointer;
+    transform: translate(0, -5px);
+}
+
 .content .container:nth-of-type(2)  .row .col {
     display: flex;
     justify-content: space-evenly;
@@ -322,6 +329,7 @@ body {
     border-radius: 50%;
     height: 80px;
     width: 80px;
+    transition: box-shadow 0.5s ease;
 }
 .content .container:nth-of-type(2)  .row .col .users:nth-of-type(2) .new-user-profile{
     background-image: url('../Img/2024-03-23_02291523.png');
@@ -330,6 +338,7 @@ body {
     border-radius: 50%;
     height: 80px;
     width: 80px;
+    transition: box-shadow 0.5s ease;
 }
 .content .container:nth-of-type(2)  .row .col .users:nth-of-type(3) .new-user-profile{
     background-image: url('../Img/IMG_1044.png');
@@ -338,13 +347,24 @@ body {
     border-radius: 50%;
     height: 80px;
     width: 80px;
+    transition: box-shadow 0.5s ease;
+}
+
+.content .container:nth-of-type(2)  .row .col .users .new-user-profile:hover{
+    box-shadow: var(--box-shadow-black);
+    cursor: pointer;
 }
 
 .content .container:nth-of-type(2)  .row .col .users:nth-of-type(4) i{
     font-size: 80px;
     color: var(--color-dark-variant);
+    transition: color 0.5s ease;
 }
 
+.content .container:nth-of-type(2)  .row .col .users:nth-of-type(4) i:hover{
+    color: var(--color-primary);
+    cursor: pointer;
+}
 
 .content .container:nth-of-type(3)  .row .col .your-notes{
     display: flex;
@@ -508,6 +528,13 @@ body {
     border-radius: 50%;
     box-shadow: var(--box-shadow);
     padding: 10px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.main-side .reminders i:hover{
+    background-color: var(--color-dark-variant);
+    color: var(--color-white);
+    cursor: pointer;
 }
 
 .main-side .work .work-panel{
@@ -519,10 +546,21 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
+    transition: transform 0.5s ease;
+}
+
+.main-side .work .work-panel:hover{
+    transform: translate(0, -5px);
+    cursor: pointer;
 }
 
 .main-side .work .work-panel i{
     font-size: 20px;
+    transition: color 0.5s ease;
+}
+
+.main-side .work  i:hover{
+    color: var(--color-primary);
 }
 
 .main-side .work .work-panel div{
@@ -560,11 +598,27 @@ body {
     justify-content: center;
     align-items: center;
     column-gap: 10px;
+    transition: border 0.5s ease, background-color 0.5s ease, color 0.5s ease;
+    
 }
+
+.add-reminders:hover{
+    border: 2px solid var(--color-primary);
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    cursor: pointer;
+}
+
 .add-reminders p{
     margin: 0;
     color: var(--color-info-dark);
+    transition: color 0.5s ease;
 }
+
+.add-reminders:hover p{
+    color: var(--color-white);
+}
+
 
 
 

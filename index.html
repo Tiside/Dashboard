@@ -21,7 +21,7 @@
             <div class="user">
                 <div class="toggle-container">
                     <input type="checkbox" id="toggle-switch" class="toggle-switch">
-                    <label for="toggle-switch" class="toggle-label">
+                    <label for="toggle-switch" class="toggle-label" onclick="darkMode()">
                         <div class="sun-icon"><i class='bx bxs-sun'></i></div>
                         <div class="moon-icon"><i class='bx bxs-moon'></i></div>
                     </label>
@@ -30,21 +30,24 @@
                     <p class="username">Hey,<span>Tiside</span> <br>
                         Admin</p>        
                 </div>
-                <div class="user-pfp"></div>
+                <div class="user-pfp" onclick="DisplayUserUi()">
+                    <i class='bx bxs-cog'></i> 
+                    <i class='bx bxs-user-circle'></i>
+                </div>
             </div>
         </div>
             <div class="main-container">
             <div class="side">
                 <ul>
-                    <li><i class='bx bxs-dashboard'></i> Dashboard</li>
-                    <li><i class='bx bx-user'></i>Users</li>
-                    <li><i class='bx bx-history'></i>History</li>
-                    <li><i class='bx bxs-analyse'></i>Analytics</li>
-                    <li><i class='bx bx-envelope'></i>Tickets</li>
-                    <li><i class='bx bx-list-ul'></i>Sale List</li>
-                    <li><i class='bx bxs-report'></i>Reports</li>
-                    <li><i class='bx bxs-cog'></i>Settings</li>
-                    <li><i class='bx bx-plus'></i>New Login</li>
+                    <li><i class='bx bxs-dashboard'></i><span>Dashboard</span></li>
+                    <li><i class='bx bx-user'></i><span>Users</span></li>
+                    <li><i class='bx bx-history'></i><span>History</span></li>
+                    <li><i class='bx bxs-analyse'></i><span>Analytics</span></li>
+                    <li><i class='bx bx-envelope'></i><span>Tickets</span></li>
+                    <li><i class='bx bx-list-ul'></i><span>Sale List</span></li>
+                    <li><i class='bx bxs-report'></i><span>Reports</span></li>
+                    <li><i class='bx bxs-cog'></i><span>Settings</span></li>
+                    <li><i class='bx bx-plus'></i><span>New Login</span></li>
                 </ul>
                 <button><i class='bx bx-log-in'></i><span>Logout</span></button>
             </div>
@@ -59,7 +62,7 @@
                                     <h4 class="sales">$65,024</h4>
                                 </div>
                                 <div class="stats-perc">
-                                  +81%
+                                  <p>+81%</p>
                              </div>
                             </div>
                             <div class="col">
@@ -68,7 +71,7 @@
                                  <h4 class="sales">31,403</h4>
                              </div>
                              <div class="stats-perc">
-                                   +48%
+                                  <p>+48%</p> 
                                 </div>
                             </div>
                             <div class="col">
@@ -77,7 +80,7 @@
                                     <h4 class="sales">15,552</h4>
                                 </div>
                                 <div class="stats-perc">
-                                    +34%
+                                   <p>+34%</p> 
                                 </div>
                             </div>
                         </div>
@@ -115,11 +118,11 @@
                             <div class="col">
                                 <div class="your-notes">
                                     <h4>Notes1</h4>
-                                    <h4><div class="note-status"></div>Created</h4>
+                                    <h4><div class="note-status"></div><span>Created</span></h4>
                                     <div class="notes-panel">
                                         <button>Open</button>
                                         <div class="notes-manipulate">
-                                        <i class='bx bx-dots-horizontal-rounded'></i>
+                                        <i class='bx bx-dots-horizontal-rounded' onclick="DisplayNotesPanel('edit-panel1')"></i>
                                         <ul id="edit-panel1">
                                             <li><a href="">Edit</a></li>
                                             <li><a href="">Learn more</a></li>
@@ -130,11 +133,11 @@
                                 </div>
                                 <div class="your-notes">
                                     <h4>Users</h4>
-                                    <h4><div class="note-status"></div>Created</h4>
+                                    <h4><div class="note-status"></div><span>Created</span></h4>
                                     <div class="notes-panel">
                                         <button>Open</button>
                                         <div class="notes-manipulate">
-                                            <i class='bx bx-dots-horizontal-rounded'></i>
+                                            <i class='bx bx-dots-horizontal-rounded' onclick="DisplayNotesPanel('edit-panel2')"></i>
                                             <ul id="edit-panel2">
                                                 <li><a href="">Edit</a></li>
                                                 <li><a href="">Learn more</a></li>
@@ -146,11 +149,11 @@
                                 
                                 <div class="your-notes">
                                     <h4>Web</h4>
-                                    <h4><div class="note-status"></div>Created</h4>
+                                    <h4><div class="note-status"></div><span>Created</span></h4>
                                     <div class="notes-panel">
                                         <button>Open</button>
                                         <div class="notes-manipulate">
-                                            <i class='bx bx-dots-horizontal-rounded'></i>
+                                            <i class='bx bx-dots-horizontal-rounded' onclick="DisplayNotesPanel('edit-panel3')"></i>
                                             <ul id="edit-panel3">
                                                 <li><a href="">Edit</a></li>
                                                 <li><a href="">Learn more</a></li>
@@ -215,5 +218,6 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="index.js"></script>
 </body>
 </html>
